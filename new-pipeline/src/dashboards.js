@@ -433,7 +433,7 @@ function getFilterSetsMapping(filters, comparisonName) {
 function getHumanReadableOptions(filterName, options) {
   var channelVersionOrder = {
     "nightly": 0,
-    "aurora": 1,
+    "dev edition": 1,
     "beta": 2
   };
   var productNames = {
@@ -664,7 +664,7 @@ function getHumanReadableOptions(filterName, options) {
         var version = parseInt(parts[1]);
         if (parts[0] === "nightly") {
           goodOptions.push(option);
-        } else if (parts[0] === "aurora") {
+        } else if (parts[0] === "dev edition") {
           (version <= latestNightlyVersion - 1 ? goodOptions : badOptions)
           .push(option);
         } else if (parts[0] === "beta") {
